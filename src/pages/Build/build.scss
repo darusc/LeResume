@@ -29,6 +29,34 @@ div.a4 {
   .build-container {
     display: flex;
     height: 100%;
+
+    &.collapsed {
+
+      div.form {
+        display: block;
+      }
+  
+      div.resume-holder {
+        padding: 0;
+        height: 0;
+    
+        div.resume-preview, div.buttons {
+          opacity: 0;
+        }
+    
+        div.collapse {
+          bottom: 10px;
+    
+          i.fa-eye {
+            display: block;
+          }
+    
+          i.fa-eye-slash {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   overflow-x: hidden;
@@ -43,28 +71,7 @@ div.a4 {
     background-color: var(--resume-holder-background);
     box-shadow: inset 0 0 20px var(--resume-holder-shadow);
 
-    transition: height .5s;
-
-    &.collapsed {
-      padding: 0;
-      height: 45px;
-
-      div.resume-preview {
-        display: none;
-      }
-
-      div.collapse {
-        bottom: 10px;
-
-        i.fa-eye {
-          display: block;
-        }
-
-        i.fa-eye-slash {
-          display: none;
-        }
-      }
-    }
+    transition: all .5s;
 
     div.resume-preview {
       overflow: hidden;
@@ -73,24 +80,29 @@ div.a4 {
         color: black;
       }
     }
-
-    div.collapse {
-      position: absolute;
-      bottom: 2%;
-      right: 2%;
-      font-size: 2rem;
-      cursor: pointer;
-      color: white;
-
-      i.fa-eye {
-        display: none;
-      }
-
-      transition: right .2s ease .25s,
-      transform .45s ease .2s;
-    }
   }
 
+  div#collapse {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--text-primary);
+    z-index: 100;
+
+    border-radius: 2px;
+
+    &:hover {
+      background-color: var(--menu-hover-bg);
+    }
+
+    span {
+      margin-right: 3px;
+      font-weight: 600;
+    }
+  }
 
   div.form {
     position: relative;
@@ -164,18 +176,20 @@ div.a4 {
     align-items: center;
     flex-direction: column;
 
+    &.collapsed {
+      div.form {
+        display: none;
+      }
+    }
+
     div.form {
-      width: unset;
+      width: fit-content;
       order: 2;
     }
 
     div.resume-holder {
       width: 100%;
       padding: 20px 0;
-
-      // div.resume-preview {
-      //   margin: 3%;
-      // }
     }
   }
 
@@ -184,9 +198,8 @@ div.a4 {
       height: unset;
 
       div.container {
-        height: unset;
         max-width: 90%;
-        min-height: 500px;
+        // min-height: 500px;
         margin: 10% 0;
       }
     }
@@ -197,25 +210,25 @@ div.a4 {
   }
 }
 
-@media (max-width: 680px) {
-  .build {
-    div.resume-holder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1000;
-      padding: 0;
-    }
+// @media (max-width: 680px) {
+//   .build {
+//     div.resume-holder {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       z-index: 1000;
+//       padding: 0;
+//     }
 
-    div.form {
-      div.container {
-        align-items: center;
-      }
-    }
-  }
-}
+//     div.form {
+//       div.container {
+//         align-items: center;
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 650px) {
   .build div.form div.container {

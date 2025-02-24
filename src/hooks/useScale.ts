@@ -8,12 +8,18 @@ export default function useScale(initial: number, ratio: number) {
     if (typeof window !== "undefined") {
 
       const resize = () => {
+
+        let r = ratio;
+        if(window.innerWidth < 500) {
+          r = 1.2;
+        }
+
         //let initialScale = 0.7;
         //if (window.innerWidth < 650) {
           //initialScale = 1.8;
         //}
 
-        setScale(initial * (window.innerWidth / ratio / 793))
+        setScale(initial * (window.innerWidth / r / 793))
       }
 
       window.addEventListener('resize', resize);

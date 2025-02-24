@@ -16,11 +16,6 @@ export default function Resume({resume, initialScale, ratio}: {resume: Resume, i
   const ref = useRef(null);
   const handlePrint = usePrint(ref);
 
-  // function collapse() {
-  //   const rh = document.querySelector(".resume-holder") as HTMLElement
-  //   rh.classList.toggle("collapsed");
-  // }
-
   return (
     // <div className={window.innerWidth < 680 ? "resume-holder collapsed" : "resume-holder"}>
     <div className="resume-holder">
@@ -45,10 +40,6 @@ export default function Resume({resume, initialScale, ratio}: {resume: Resume, i
           </div>
         </div>
       </div>
-      {/* <div id="collapse" className="collapse" onClick={collapse}>
-        <i className="fa-solid fa-eye-slash"></i>
-        <i className="fa-solid fa-eye"></i>
-      </div> */}
     </div>
   )
 }
