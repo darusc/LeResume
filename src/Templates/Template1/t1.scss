@@ -60,19 +60,6 @@ div.pdf#t1 {
       }
     }
 
-    div.icon-text {
-      span:last-child {
-        margin-left: 5px;
-      }
-
-      a {
-        text-decoration: none;
-        color: $color;
-        font-size: 12px; // 12px 0.75rem
-        margin-left: 5px;
-      }
-    }
-
     main {
       display: flex;
       border-bottom: 1px solid $color;
@@ -136,27 +123,8 @@ div.pdf#t1 {
           margin-bottom: 5px;
         }
 
-        span.lang {
-          display: inline-block;
-        }
-
         span.name {
           font-weight: bold;
-        }
-
-        span.language-color {
-          display: inline-block;
-          width: 12px; //12px 0.75rem
-          height: 12px; // 12px 0.75rem
-          border-radius: 50%;
-        }
-
-        span.language-name {
-          position: relative;
-          font-size: 12px; // 12px 0.75rem
-          margin-left: 2px;
-          margin-right: 5px;
-          top: -2px;
         }
       }
     }

@@ -1,4 +1,4 @@
-import { Language, parseDate, IconText, IconLink } from '../components';
+import { Language, parseDate, IconText, IconLink } from '../common';
 
 import './t2.scss'
 

@@ -1,4 +1,4 @@
-import { Language, parseDate, IconText, IconLink } from '../components';
+import { Language, parseDate, IconText, IconLink } from '../common';
 
 import './t1.scss';
 
@@ -9,7 +9,7 @@ export default function Template1({ mref, scale, data }: { mref: any, scale: num
         
         <header>
           <h1 className="name">{data.basics.firstname + " " + data.basics.lastname}</h1>
-          {data.basics.jobtitle && <h3 className='title'>{data.basics.jobtitle}</h3>}
+          {/* {data.basics.jobtitle && <h3 className='title'>{data.basics.jobtitle}</h3>} */}
           <section className='section inline'>
             <div className="content">
               {data.basics.phone && <IconText icon='fa-solid fa-phone' text={data.basics.phone} />}
