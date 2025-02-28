@@ -10,6 +10,7 @@ import emptyResume from '@data/emptyResume';
 
 import temp1 from '@assets/templates/1.png';
 import temp2 from '@assets/templates/2.png';
+import temp3 from '@assets/templates/3.png';
 
 import logod from '@assets/logo.svg';
 import logol from '@assets/logolight.svg';
@@ -93,7 +94,7 @@ export default function ChooseTemplate({darkmode}: any) {
         <div className='container'>
           <Template src={temp1} onClick={() => onTemplateClick(1)}></Template>
           <Template src={temp2} onClick={() => onTemplateClick(2)}></Template>
-          <Template src={temp2} onClick={() => {}}></Template>
+          <Template src={temp3} onClick={() => onTemplateClick(3)}></Template>
           <Template src={temp2} onClick={() => {}}></Template>
         </div>
       </div>
