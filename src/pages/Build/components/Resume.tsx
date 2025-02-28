@@ -29,7 +29,8 @@ export default function Resume({resume, initialScale, ratio}: {resume: Resume, i
             {
               "1": <Templates.Template1 mref={ref} scale={scale * zoom} data={resume.data} />,
               "2": <Templates.Template2 mref={ref} scale={scale * zoom} data={resume.data} />,
-              "3": <Templates.Template3 mref={ref} scale={scale * zoom} data={resume.data} />
+              "3": <Templates.Template3 mref={ref} scale={scale * zoom} data={resume.data} />,
+              "4": <Templates.Template4 mref={ref} scale={scale * zoom} data={resume.data} />
             }[tid]
           }
         </div>

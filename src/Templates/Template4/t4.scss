@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+div.pdf#t4 {
+
+  background-color: #fafafa;
+
+  header {
+    font-family: "Anonymous Pro", monospace;
+
+    h1, h2 {
+      display: inline;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+      float: right;
+      margin: 0;
+    }
+  }
+
+  main {
+    
+    padding: 50px 0;
+
+    section {
+      display: flex;
+      margin-bottom: 20px;
+
+      div.name {
+        width: 25%;
+        font-size: 16px;
+        font-family: 'Arimo';
+        font-weight: bold;
+      }
+
+      div.content {
+        width: 75%;
+        font-family: 'DM Sans';
+
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+
+        &.columns {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          
+          div.detail {
+            width: 50%;
+          }
+        }
+
+        div.detail {
+          font-size: 14px;
+          
+          span:first-of-type {
+            font-weight: bold;
+          }
+        
+          a { 
+            text-decoration: none;
+          }
+        }
+      }
+
+
+      div.project {
+        font-size: 14px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+
+        span.name {
+          font-weight: bold;
+        }
+
+        div.languages {
+          float: right;
+        }
+
+        ul {
+          margin: 5px 0 0 0;
+          padding-left: 15px;
+        }
+
+        div.icon-text {
+          display: inline;
+
+          &:first-of-type {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      div.work {
+        font-size: 14px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        
+        div.job {
+          font-weight: bold;
+        }
+
+        ul {
+          margin: 5px 0 0 0;
+          padding-left: 15px;
+        }
+      }
+
+      div.education {
+        font-size: 14px;
+        
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+
+        span {
+          display: block;
+        }
+
+        span:first-of-type {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
