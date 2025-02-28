@@ -5,7 +5,13 @@ import './common.scss'
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 export function parseDate(input: string) {
-  return months[parseInt(input.slice(-2)) - 1] + " " + input.slice(0, 4);
+  if(input == "") {
+    return "Present"
+  }
+
+  const result = months[parseInt(input.slice(-2)) - 1] + " " + input.slice(0, 4);
+  
+  return result;
 }
 
 export function IconText({ icon, text }: any) {
