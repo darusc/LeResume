@@ -9,7 +9,7 @@ div.pdf#t1 {
   div.container {
     //padding: .75in;
 
-    div.header {
+    header {
       h1.name {
         font-size: 30px; // 30px 2rem
         font-weight: bold;
@@ -26,7 +26,7 @@ div.pdf#t1 {
       }
     }
 
-    div.section {
+    section {
       h4 {
         font-size: 18px; // 18px 1.125rem
         font-weight: bold;
@@ -73,7 +73,7 @@ div.pdf#t1 {
       }
     }
 
-    div.main {
+    main {
       display: flex;
       border-bottom: 1px solid $color;
 
