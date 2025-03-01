@@ -64,7 +64,7 @@ export default function Template5({ mref, scale, data }: { mref: any, scale: num
                 <div className="project">
                   <span className="name">{project.name}</span>
                   <div>
-                    {project.github && <IconLink icon='fa-brands fa-github' text='Github' link={project.github}/>}
+                    {project.github && <IconLink icon='fa-brands fa-github' text='Github' link={"https://" + project.github}/>}
                     {project.website && <IconLink text={project.website} icon='fa-solid fa-globe' link={"https://" + project.website} />}
                     <div className="languages">
                       {[...project.languages].map((lang: string) => <Language key={lang} lang={lang} />)}

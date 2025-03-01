@@ -28,7 +28,6 @@ export function Description({ initialValue, onInput }: { initialValue: string[],
   const [prevl, setPrevl] = useState(-1);
 
   function parseInitialValue() {
-    console.log("DESCRIPTION", initialValue);
     if (initialValue.length > 0) {
       return "\u2022 " + initialValue.join(`\n\u2022`);
     }

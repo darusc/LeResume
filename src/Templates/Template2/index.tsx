@@ -109,7 +109,7 @@ export default function Template2({ mref, scale, data }: { mref: any, scale: num
                         <div className="row">
                           <div style={{display: 'flex'}}>
                             <div style={{paddingRight: '10px'}}>
-                              {project.github && <IconLink text='Github' icon='fa-brands fa-github' link={project.github} />}
+                              {project.github && <IconLink text='Github' icon='fa-brands fa-github' link={"https://" + project.github} />}
                             </div>
                             <div>
                               {project.website && <IconLink text={project.website} icon='fa-solid fa-globe' link={"https://" + project.website} />}

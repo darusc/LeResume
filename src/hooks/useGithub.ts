@@ -7,7 +7,7 @@ export async function useGithub(owner: string) {
       name: repo.name,
       description: repo.description,
       language: repo.language,
-      url: repo.html_url
+      url: repo.html_url.substring(8)
     }
   ));
 
