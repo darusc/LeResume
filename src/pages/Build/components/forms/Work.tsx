@@ -59,7 +59,7 @@ function WorkInput({ index, value, setValue, del }: { index: number, value: Work
 }
 
 export default function Work({ value, setValue }: { value: Resume, setValue: Function }) {
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(value.data.work.slice(-1)[0].id + 1);
 
   function removeWork(id: number) {
     setValue((draft: Resume) => { draft.data.work = draft.data.work.filter(el => el.id != id) });

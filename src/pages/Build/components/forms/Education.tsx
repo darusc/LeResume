@@ -49,7 +49,7 @@ function EducationInput({ index, value, setValue, del }: { index: number, value:
 }
 
 export default function Education({ value, setValue }: { value: Resume, setValue: Function }) {
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(value.data.education.slice(-1)[0].id + 1);
 
   function removeEducation(id: number) {
     setValue((draft: Resume) => { draft.data.education = draft.data.education.filter(el => el.id != id) });

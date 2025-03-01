@@ -73,7 +73,7 @@ function ProjectInput({ value, index, setValue, del }: { value: Project, index: 
 }
 
 export default function Projects({ github, value, setValue }: { github: string, value: Resume, setValue: Function }) {
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(value.data.projects.slice(-1)[0].id + 1);
 
   const [repos, setRepos] = useState<GithubRepo[]>();
 

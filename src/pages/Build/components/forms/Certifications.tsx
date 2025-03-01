@@ -40,7 +40,7 @@ function CertificationInput({ index, value, setValue, del }: { index: number, va
 }
 
 export default function Certifications({ value, setValue }: { value: Resume, setValue: Function }) {
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(value.data.certifications.slice(-1)[0].id + 1);
 
   function removeCertification(id: number) {
     setValue((draft: Resume) => { draft.data.certifications = draft.data.certifications.filter(el => el.id != id) });
