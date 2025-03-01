@@ -1,10 +1,10 @@
 import { Language, parseDate, IconText, IconLink } from '../common';
 
-import './t3.scss'
+import './t5.scss'
 
-export default function Template3({ mref, scale, data }: { mref: any, scale: number, data: ResumeData }) {
+export default function Template5({ mref, scale, data }: { mref: any, scale: number, data: ResumeData }) {
   return (
-    <div ref={mref} id='t3' className="a4 pdf resume" style={{transform: `scale(${scale})`}}>
+    <div ref={mref} id='t5' className="a4 pdf resume" style={{transform: `scale(${scale})`}}>
 
         <header>
           <h1>{data.basics.firstname + " " + data.basics.lastname}</h1>
