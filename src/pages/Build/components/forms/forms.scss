@@ -50,7 +50,6 @@ form {
     }
   }
 
-
   textarea {
     width: 43.5rem;
   }
@@ -141,16 +140,17 @@ form {
     &.git {
       width: unset;
       padding: 0.5em 1em;
-      background-color: var(--button-background2);
+      background-color: var(--button-primary-bg);
       border-radius: 5px;
-      border: var(--button-border2);
       cursor: pointer;
       font-size: unset;
 
       &:hover {
-        background-color: var(--button-hover2);
-        border: var(--button-border2-hover);
-        color: var(--button-color);
+        background-color: var(--button-primary-hover);
+      }
+
+      i {
+        color: var(--button-primary-color);
       }
 
       input {
