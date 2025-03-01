@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+div.pdf#t3 {
+
+  font-family: 'Anonymous Pro';
+
+  background-color: #fafafa;
+
+  header {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    span {
+      display: block;
+      text-align: end;
+    }
+    
+    h1 {
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 70px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+
+  main {
+
+    display: flex;
+
+    & > section:first-of-type {
+      margin-right: 30px;
+    }
+
+    section {
+
+      &[id] {
+        margin-bottom: 30px;
+      }
+
+      div.name {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 13px;
+      }
+
+      ul {
+        padding-left: 15px;
+      }
+
+      div.education {
+
+        margin-top: 12px;
+
+        span {
+          display: block;
+
+          &:first-of-type {
+            font-weight: bold;
+            margin-bottom: 3px;
+          }
+        }
+      }
+
+      div.project {
+
+        margin-top: 12px;
+
+        span.name {
+          letter-spacing: 1px;
+          font-weight: bold;
+        }
+
+        a {
+          font-size: 14px;
+          display: block;
+        }
+
+        div.languages {
+          margin-top: 4px;
+          span {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      div.work {
+        span {
+          display: block;
+        }
+
+        & > span:first-of-type {
+          font-weight: bold;
+        }
+      }
+
+    }
+
+  }
+
+}
