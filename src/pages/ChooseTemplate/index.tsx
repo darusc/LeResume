@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
+import useAuth from '@hooks/useAuth';
+
 import { AppContext } from '@context/ProviderContext';
 
 import { clearLocalStorage, getResumeFromLocalStorage, saveResumeToLocalStorage } from '@services/localstorage';
@@ -10,14 +12,13 @@ import emptyResume from '@data/emptyResume';
 
 import temp1 from '@assets/templates/1.png';
 import temp2 from '@assets/templates/2.png';
-import temp3 from '@assets/templates/3.png';
+// import temp5 from '@assets/templates/5.png';
 import temp4 from '@assets/templates/4.png';
 
 import logod from '@assets/logo.svg';
 import logol from '@assets/logolight.svg';
 
 import './choosetemplate.scss';
-import useAuth from '@hooks/useAuth';
 
 function Template({ src, onClick, ...props }: any) {
   return (
@@ -95,8 +96,9 @@ export default function ChooseTemplate({darkmode}: any) {
         <div className='container'>
           <Template src={temp1} onClick={() => onTemplateClick(1)}></Template>
           <Template src={temp2} onClick={() => onTemplateClick(2)}></Template>
-          <Template src={temp3} onClick={() => onTemplateClick(3)}></Template>
+          <Template src={temp2} onClick={() => onTemplateClick(3)}></Template>
           <Template src={temp4} onClick={() => onTemplateClick(4)}></Template>
+          {/* <Template src={temp5} onClick={() => onTemplateClick(5)}></Template> */}
         </div>
       </div>
     </>
