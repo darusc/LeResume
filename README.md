@@ -2,7 +2,9 @@
   <img center src="imgs/logo.svg">
 </h1>
 
-<h3 align="center">Resume build & share app</h3>
+<h3 align="center">Resume builder & sharing platform</h3>
+
+<h4 align="center"><a href="https://leresume.vercel.app">leresume.vercel.app</a></h4>
 
 <br>
 
@@ -13,18 +15,18 @@ Users can customize their resumes, generate multiple versions tailored to differ
 
 ### Features
 
-- Add your coding projects directly from github.
+- Build a professtional single page resume
+- Add your coding projects directly from github
 - Share your resumes with others
 - See how many views your shared resumes got
-- Previewing the resume in real time.
-- Multiple templates available.
+- Previewing the resume in real time
+- Can be used without an account (has some limitations)
+- Multiple templates available
 
 <br>
+
+## Templates
 
 <p align="center">
   <img src="imgs/templates.png"></img>
 </p>
-
-
-
-
