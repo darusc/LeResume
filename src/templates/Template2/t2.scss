@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// .build {
+$color: #575757;
+
+div.pdf#t2 {
+  font-family: 'Hanken Grotesk';
+
+  div.container {
+    //padding: .75in;
+
+    display: flex;
+    flex-direction: column;
+
+    div.header {
+      h1.name {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      h3.title {
+        font-family: 'Roboto';
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 5px;
+        font-weight: 100;
+      }
+
+      border-bottom: 1px solid $color;
+    }
+
+    div.section {
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin: 15px 0;
+      }
+
+      span {
+        font-family: 'Roboto';
+        font-size: 12px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        &.spaced li:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    div.icon-text {
+      span:last-child {
+        margin-left: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    }
+
+    div.main {
+      display: flex;
+      flex-grow: 1;
+      border-bottom: 1px solid $color;
+
+      div.col {
+        &.left {
+          border-right: 1px solid $color;
+          width: 35%;
+          padding-right: 15px;
+        }
+
+        &.right {
+          padding-left: 15px;
+          width: 65%;
+        }
+      }
+
+      div.education {
+        span {
+          display: block;
+
+          &.top {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+
+        }
+      }
+
+      div.work,
+      div.project {
+        margin-bottom: 20px;
+
+        div.row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        ul {
+          margin-left: 20px;
+          list-style: disc;
+
+          li span {
+            line-height: 1.5;
+            display: block;
+          }
+        }
+      }
+
+      div.work {
+        span {
+          margin-bottom: 5px;
+
+          &.pos {
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+
+      div.project {
+        div.row {
+          margin-bottom: 5px;
+        }
+
+        span.lang {
+          display: inline-block;
+        }
+
+        span.name {
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        span.language-color {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+
+        span.language-name {
+          position: relative;
+          font-size: 12px;
+          margin-left: 2px;
+          margin-right: 5px;
+          top: -2px;
+        }
+      }
+
+    }
+  }
+
+  color: $color;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $color;
+  }
+
+  span.line {
+    display: inline-block;
+    width: 80%;
+    border-bottom: 1px dashed $color;
+  }
+}
+
+// }

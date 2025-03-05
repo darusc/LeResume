@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$color: #575757;
+
+div.pdf#t1 {
+  font-family: 'Times New Roman', Times, serif;
+
+  div.container {
+    //padding: .75in;
+
+    header {
+      h1.name {
+        font-size: 30px; // 30px 2rem
+        font-weight: bold;
+        margin: 0;
+      }
+
+      h3.title {
+        font-family: 'Roboto';
+        font-size: 12px; // 12px .75rem
+        text-align: center;
+        letter-spacing: 5px;
+        font-weight: 100;
+        margin: 0;
+      }
+    }
+
+    section {
+      h4 {
+        font-size: 18px; // 18px 1.125rem
+        font-weight: bold;
+        margin: 15px 0;
+        border-bottom: 1px solid $color;
+      }
+
+      span {
+        font-size: 14px; // 14px 0.875rem
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        &.spaced li:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &.inline div.content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &.subsection {
+        h4 {
+          font-size: 16px; // 16px 1rem
+        }
+      }
+    }
+
+    main {
+      display: flex;
+      border-bottom: 1px solid $color;
+
+      div.education {
+        span {
+          display: block;
+
+          &.top {
+            font-weight: bold;
+          }
+
+          &.middle {
+            margin-bottom: 5px;
+          }
+        }
+
+        &.inline {
+          div.flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      div.work,
+      div.project {
+
+        margin-bottom: 10px;
+
+        div.row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        ul {
+          margin-left: 20px;
+          list-style: disc;
+
+          li span {
+            line-height: 1.5;
+            display: block;
+          }
+        }
+      }
+
+      div.work {
+        span {
+          margin-bottom: 5px;
+
+          &.pos {
+            font-weight: bold;
+          }
+        }
+      }
+
+      div.project {
+        div.row {
+          margin-bottom: 5px;
+        }
+
+        span.name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $color;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  span.line {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid $color;
+  }
+}

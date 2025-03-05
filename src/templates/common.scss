@@ -1,0 +1,31 @@
+span.lang {
+  display: inline-block;
+}
+
+span.language-color {
+  display: inline-block;
+  width: 12px; //12px 0.75rem
+  height: 12px; // 12px 0.75rem
+  border-radius: 50%;
+}
+
+span.language-name {
+  position: relative;
+  font-size: 12px; // 12px 0.75rem
+  margin-left: 2px;
+  margin-right: 5px;
+  top: -2px;
+}
+
+div.icon-text {
+  span:last-child {
+    margin-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #575757;
+    font-size: 12px; // 12px 0.75rem
+    margin-left: 5px;
+  }
+}
