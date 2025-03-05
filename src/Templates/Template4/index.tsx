@@ -1,4 +1,4 @@
-import { IconLink, Language, parseDate } from '@templates/common';
+import { IconLink, Language, parseDate } from '../common';
 import './t4.scss';
 
 export default function Template4({ mref, scale, data }: { mref: any, scale: number, data: ResumeData }) {

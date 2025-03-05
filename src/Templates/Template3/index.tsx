@@ -1,4 +1,4 @@
-import { parseDate } from '@templates/common'
+import { parseDate } from '../common'
 import './t3.scss'
 
 export default function Template3({ mref, scale, data }: { mref: any, scale: number, data: ResumeData }) {
