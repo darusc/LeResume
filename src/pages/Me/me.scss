@@ -94,6 +94,16 @@ div.me {
             justify-content: space-between;
             font-weight: 500;
 
+            & > div:last-child span {
+              width: fit-content;
+              padding: 4spx;
+              border-radius: 2px;
+              &:hover {
+                color: white;
+                background-color: var(--menu-hover-bg);
+              }
+            }
+
             &-header {
               display: flex;
               gap: 1em;

@@ -10,24 +10,30 @@ import './shared.scss';
 export default function Shared() {
 
   const { user, rid } = useParams();
-  const [_, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   
   const services = useContext(AppContext);
 
-  const [resume, setResume] = useState<Resume | null>(null);
+  const [resume, setResume] = useState<Resume | null | undefined>(undefined);
 
   useEffect(() => {
     services.db.getSharedResume(user!, rid!).then(res => {
       setResume(res);
-      setSearchParams(prev => { 
-        prev.set('template', `${res?.template}`);
-        return prev;
-      });
+      if(searchParams.get('template') == null) {
+        setSearchParams(prev => { 
+          prev.set('template', `${res?.template}`);
+          return prev;
+        });
+      }
     });
   }, []);
 
-  if(resume == null) {
-    return <h1>Resume unavailable.</h1>
+  if(resume === undefined) {
+    return <></>
+  }
+
+  if(resume === null) {
+    return <h1>Resume unavailable</h1>
   }
 
   return (

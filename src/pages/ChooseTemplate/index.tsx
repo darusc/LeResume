@@ -10,10 +10,7 @@ import { getTimestamp } from '@services/time';
 
 import emptyResume from '@data/emptyResume';
 
-import temp1 from '@assets/templates/1.png';
-import temp2 from '@assets/templates/2.png';
-import temp3 from '@assets/templates/3.png';
-import temp4 from '@assets/templates/4.png';
+import templatesImg from '@assets/templates';
 
 import logod from '@assets/logo.svg';
 import logol from '@assets/logolight.svg';
@@ -94,10 +91,10 @@ export default function ChooseTemplate({darkmode}: any) {
       <div className='templates'>
         <h1>Choose a template</h1>
         <div className='container'>
-          <Template src={temp1} onClick={() => onTemplateClick(1)}></Template>
-          <Template src={temp2} onClick={() => onTemplateClick(2)}></Template>
-          <Template src={temp3} onClick={() => onTemplateClick(3)}></Template>
-          <Template src={temp4} onClick={() => onTemplateClick(4)}></Template>
+          <Template src={templatesImg[0]} onClick={() => onTemplateClick(1)}></Template>
+          <Template src={templatesImg[1]} onClick={() => onTemplateClick(2)}></Template>
+          <Template src={templatesImg[2]} onClick={() => onTemplateClick(3)}></Template>
+          <Template src={templatesImg[3]} onClick={() => onTemplateClick(4)}></Template>
           {/* <Template src={temp5} onClick={() => onTemplateClick(5)}></Template> */}
         </div>
       </div>
