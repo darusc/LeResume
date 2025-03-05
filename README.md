@@ -1,31 +1,30 @@
-<img src="imgs/logo.svg" width=100%></img>
+<h1 align="center">
+  <img center src="imgs/logo.svg">
+</h1>
 
-## About
+<h3 align="center">Resume build & share app</h3>
 
-An open source and simple to use web application to build a professional resume. No account required. Built for devs.
+<br>
 
-Completely free, no ads. Everything happens on your browser, no server side, your data is completely private. 
+## Description
+
+**LeResume** is powerful online platform designed to help users create professional resumes with ease.
+Users can customize their resumes, generate multiple versions tailored to different job applications, and share them effortlessly via a personalized link or downloadable PDF.
 
 ### Features
 
-- No account required.
-- Multiple templates available.
-- Updating the resume in real time.
 - Add your coding projects directly from github.
-- Local saving. Come back any time and contiune building.
+- Share your resumes with others
+- See how many views your shared resumes got
+- Previewing the resume in real time.
+- Multiple templates available.
+
+<br>
 
 <p align="center">
-  <img src="imgs/resumes.png"></img>
+  <img src="imgs/templates.png"></img>
 </p>
 
-
-## Contributing & new templates
-Each template is built using a simple component system and style sheet. Everything is located in ```/src/Templates```
-
-- Fork this repository
-- Clone the project
-- Commit and push changes to your fork
-- Submit a Pull Request
 
 
 
