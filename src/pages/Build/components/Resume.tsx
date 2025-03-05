@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import usePrint from '@hooks/usePrint';
 import useScale from '@hooks/useScale';
 
-import * as Templates from '@templates/index';
+import * as Templates from '../../../templates/index';
 
 export default function Resume({resume, initialScale, ratio}: {resume: Resume, initialScale: number, ratio: number}) {
   const [searchParams] = useSearchParams();
