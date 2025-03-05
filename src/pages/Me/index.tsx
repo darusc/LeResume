@@ -8,7 +8,7 @@ import useAuth from "@hooks/useAuth";
 import { saveResumeToLocalStorage } from "@services/localstorage";
 import { getDateFromTimestamp } from "@services/time";
 
-import tmp1 from '@assets/templates/1.png'
+import templateImgs from '@assets/templates';
 
 import logod from '@assets/logo.svg';
 import logol from '@assets/logolight.svg';
@@ -63,12 +63,17 @@ function ResumeCard({resume, setResumes}: {resume: Resume, setResumes: Updater<R
     }
   }
 
+  function onSharedClick() {
+    const user = services.auth.getUserId();
+    navigate(`/shared/${user}/${resume.id}?template=${resume.template}`);
+  }
+
   return (
     <>
       <div className="resumeCard" onClick={() => onClick()}>
         <div className="content">
           <div className="preview">
-            <img src={tmp1}/>
+            <img src={templateImgs[resume.template - 1]}/>
           </div>
           <div className="details">
             <div className="details-header">
@@ -78,7 +83,10 @@ function ResumeCard({resume, setResumes}: {resume: Resume, setResumes: Updater<R
               </div>
             </div>
             <div>
-              {resume.shared && <span><i className="fa-solid fa-eye"></i> {resume.views}</span>}
+              {resume.shared && <span onClick={e => {
+                e.stopPropagation();
+                onSharedClick();
+              }}><i className="fa-solid fa-eye"></i> {resume.views}</span>}
             </div>
           </div>
           <div className="actions">
