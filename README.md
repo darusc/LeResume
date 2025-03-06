@@ -13,6 +13,14 @@
 **LeResume** is powerful online platform designed to help users create professional resumes with ease.
 Users can customize their resumes, generate multiple versions tailored to different job applications, and share them effortlessly via a personalized link or downloadable PDF.
 
+##
+
+<br>
+
+<p align="center">
+  <img center src="imgs/leresume.gif">
+</p>
+
 ### Features
 
 - Build a professtional single page resume
