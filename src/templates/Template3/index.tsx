@@ -2,6 +2,7 @@ import { parseDate } from '../common'
 import './t3.scss'
 
 export default function Template3({ mref, scale, data }: { mref: any, scale: number, data: ResumeData }) {
+  console.log(data);
   return (
     <div ref={mref} id='t3' className="a4 pdf resume" style={{transform: `scale(${scale})`}}>
       
@@ -24,7 +25,7 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
 
         <section style={{width: '30%'}}>
           
-          {data.skills.length > 0 &&
+          {data.skills.length > 0 && data.skills[0].skills.length > 0 &&
             <section id='skills'>
               <div className='name'>SKILLS</div>
               <div className="content">
@@ -37,7 +38,7 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
             </section>
           }
 
-          {data.education.length > 0 &&
+          {data.education.length > 0 && data.education[0].institution &&
             <section id='education'>
               <div className='name'>EDUCATION</div>
               <div className="content">
@@ -52,7 +53,7 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
             </section>
           }
 
-          {data.certifications.length > 0 &&
+          {data.certifications.length > 0 && data.certifications[0].issuer &&
             <section id='education'>
               <div className='name'>CERTIFICATIONS</div>
               <div className="content">
@@ -71,7 +72,7 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
 
         <section style={{width: '70%'}}>
           
-          {data.projects.length > 0 &&
+          {data.projects.length > 0 && data.projects[0].name &&
             <section id="projects">
               <div className="name">PROJECTS</div>
               <div className="content">
@@ -96,7 +97,7 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
             </section>
           }
 
-          {data.work.length > 0 &&
+          {data.work.length > 0 && data.work[0].position &&
             <section id="experience">
               <div className="name">EXPERIENCE</div>
               <div className="content">
