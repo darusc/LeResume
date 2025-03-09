@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import { Analytics } from '@vercel/analytics/react'
+
 import { enableMapSet } from 'immer'
 
 import { ProviderContext } from '@context/ProviderContext'
@@ -48,6 +50,7 @@ function App() {
         <Route path='/shared/:user/:rid' element={<Shared/>}/>
         <Route path='*' element={<h1>404 Page not found!</h1>} />
       </Routes>
+      <Analytics/>
     </ProviderContext>
   )
 }
