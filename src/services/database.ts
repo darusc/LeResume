@@ -12,6 +12,7 @@ export class Database {
     const db = getFirestore(app);
     await setDoc(doc(db, userId, "shared"), {});
     await setDoc(doc(db, userId, "nonshared"), {});
+    await setDoc(doc(db, userId, "metadata"), {'increment': 1});
   }
 
   public async getMetadata(userId: string, key?: string) {
