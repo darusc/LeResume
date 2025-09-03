@@ -46,6 +46,21 @@ function ResumeCard({resume, setResumes}: {resume: Resume, setResumes: Updater<R
     setResumes(draft => { draft = draft.filter(r => r.name != resume.name) });
   }
 
+  async function onDuplicate() {
+    // Fetch and update the increment metadata used as id for new resume
+    const id = await services.db.getMetadata(services.auth.getUserId(), 'increment');
+    services.db.setMetadata(services.auth.getUserId(), 'increment', parseInt(id) + 1);
+
+    // Create a deep copy of the resume, update its id and upload it
+    const newResume = {...resume};
+    newResume.id = id;
+    newResume.name = `${resume.name} (copy)`;
+    services.db.uploadResume(services.auth.getUserId(), newResume);
+
+    // Add the new resume to the list
+    setResumes(draft => { draft.push(newResume) });
+  }
+
   function onClick() {
     saveResumeToLocalStorage(resume);
     navigate(`/build?template=${resume.template}&step=basics`);
@@ -116,6 +131,15 @@ function ResumeCard({resume, setResumes}: {resume: Resume, setResumes: Updater<R
                   }}>
                   Change template 
                   <i className="fa-solid fa-file"></i>
+                </span>
+                <span 
+                  onClick={(e) => { 
+                    e.stopPropagation(); 
+                    onDuplicate(); 
+                    setMoreOpen(false);
+                  }}>
+                  Duplicate
+                  <i className="fa-solid fa-clone"></i>
                 </span>
                 <span 
                   onClick={(e) => { 
