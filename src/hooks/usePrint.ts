@@ -3,17 +3,16 @@ import { useReactToPrint } from "react-to-print";
 /**
  * Wrapper hook around useReactToPrint
  */
-export default function usePrint(ref: React.MutableRefObject<null>) {
+export default function usePrint(ref: React.RefObject<HTMLElement>, title: string) {
   return useReactToPrint({
-    documentTitle: 'resume.pdf',
+    documentTitle: title,
     content: () => ref.current,
-    print: async (printWindow: HTMLIFrameElement) => {
-      const printContent = printWindow.contentDocument || printWindow.contentWindow?.document;
-
-      const a4 = printContent?.querySelector('.a4') as HTMLElement;
-      a4.style.transform = 'scale(1)';
-
-      printWindow.contentWindow?.print();
-    }
+    pageStyle: `
+      @media print {
+        .a4 {
+          transform: scale(1) !important;
+        }
+      }
+    `,
   });
 }

@@ -13,8 +13,8 @@ export default function Resume({resume, initialScale, ratio}: {resume: Resume, i
   const scale = useScale(initialScale, ratio);
   const [zoom, setZoom] = useState(1);
 
-  const ref = useRef(null);
-  const handlePrint = usePrint(ref);
+  const ref = useRef<HTMLElement>(null);
+  const handlePrint = usePrint(ref, resume.data.basics.firstname + "_" + resume.data.basics.lastname);
 
   return (
     // <div className={window.innerWidth < 680 ? "resume-holder collapsed" : "resume-holder"}>
