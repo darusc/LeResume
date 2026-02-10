@@ -95,6 +95,32 @@ export default function Template2({ mref, scale, data }: { mref: any, scale: num
 
           <div className="col right" style={{width: '65%'}}>
 
+            {/* experience  */}
+            {data.work.length > 0 && data.work[0].position &&
+              <div className="section inline">
+                <h4>Experience</h4>
+                <ul style={{ listStyle: "none", padding: 0 }}>
+                  {data.work.map(work => (
+                    <li>
+                      <div className='work'>
+                        <div className='row'>
+                          <span className='pos'>{work.position}</span>
+                          <span>{work.start && parseDate(work.start) + " - " + ((work.end != undefined && work.end != "") ? parseDate(work.end) : "present")}</span>
+                        </div>
+                        <div className='row'>
+                          <span>{work.company}</span>
+                          <span>{work.location}</span>
+                        </div>
+                        <ul>
+                          {work.description.map((dsc: string) => <li><span>{dsc}</span></li>)}
+                        </ul>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            }
+
             {/* projects  */}
             {data.projects.length > 0 && data.projects[0].name &&
               <div className="section inline">
@@ -124,33 +150,6 @@ export default function Template2({ mref, scale, data }: { mref: any, scale: num
                             {project.description.map((dsc: string, i) => <li key={i}><span>{dsc}</span></li>)}
                           </ul>
                         }
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            }
-
-
-            {/* experience  */}
-            {data.work.length > 0 && data.work[0].position &&
-              <div className="section inline">
-                <h4>Experience</h4>
-                <ul style={{ listStyle: "none", padding: 0 }}>
-                  {data.work.map(work => (
-                    <li>
-                      <div className='work'>
-                        <div className='row'>
-                          <span className='pos'>{work.position}</span>
-                          <span>{work.start && parseDate(work.start) + " - " + ((work.end != undefined && work.end != "") ? parseDate(work.end) : "present")}</span>
-                        </div>
-                        <div className='row'>
-                          <span>{work.company}</span>
-                          <span>{work.location}</span>
-                        </div>
-                        <ul>
-                          {work.description.map((dsc: string) => <li><span>{dsc}</span></li>)}
-                        </ul>
                       </div>
                     </li>
                   ))}

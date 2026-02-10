@@ -72,6 +72,25 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
 
         <section style={{width: '70%'}}>
           
+          {data.work.length > 0 && data.work[0].position &&
+            <section id="experience">
+              <div className="name">EXPERIENCE</div>
+              <div className="content">
+                {data.work.map(work => (
+                  <div className="work">
+                    <span>{work.position}, {work.company}, {work.location}</span>
+                    <span>{parseDate(work.start) + " - " + parseDate(work.end)}</span>
+                    {work.description.length > 0 &&
+                      <ul>
+                        {work.description.map((dsc: string, i) => <li key={i}><span>{dsc}</span></li>)}
+                      </ul>
+                    }
+                  </div>
+                ))}
+              </div>
+            </section>
+          }
+
           {data.projects.length > 0 && data.projects[0].name &&
             <section id="projects">
               <div className="name">PROJECTS</div>
@@ -89,25 +108,6 @@ export default function Template3({ mref, scale, data }: { mref: any, scale: num
                     {project.description.length > 0 &&
                       <ul>
                         {project.description.map((dsc: string, i) => <li key={i}><span>{dsc}</span></li>)}
-                      </ul>
-                    }
-                  </div>
-                ))}
-              </div>
-            </section>
-          }
-
-          {data.work.length > 0 && data.work[0].position &&
-            <section id="experience">
-              <div className="name">EXPERIENCE</div>
-              <div className="content">
-                {data.work.map(work => (
-                  <div className="work">
-                    <span>{work.position}, {work.company}, {work.location}</span>
-                    <span>{parseDate(work.start) + " - " + parseDate(work.end)}</span>
-                    {work.description.length > 0 &&
-                      <ul>
-                        {work.description.map((dsc: string, i) => <li key={i}><span>{dsc}</span></li>)}
                       </ul>
                     }
                   </div>
